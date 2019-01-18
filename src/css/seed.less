@@ -5,7 +5,7 @@ body {
   font-family: @df-sans;
   padding: 0;
   margin: 0 auto;
-  max-width: 900px;
+  max-width: 960px;
   font-size: 16px;
 }
 .outmost {
@@ -17,9 +17,20 @@ body {
   padding-bottom: 0;
   clear: both;
 }
+
+.display-flex()
+  // display: flex;)
+  
+  [data-flex="1-2"] {
+      .flex(0 0 50%)}
+
+
 .aspect-ratio-outer {
   width: 100%;
   position: relative;
+
+
+
   .aspect-ratio-inner {
     padding-bottom: percentage(@aspect-ratio);
     position: relative;
