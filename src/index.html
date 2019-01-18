@@ -1,0 +1,61 @@
+<!doctype html>
+<html>
+
+<head>
+  <title>
+    <%= json.project.title %>
+  </title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <!-- Safari, you're the worst -->
+  <meta name='format-detection' content='telephone=no'>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <%= t.include("partials/_head.html") %>
+</head>
+
+<body>
+
+  <responsive-child class="map-container">
+    <div class="outmost">
+      <section class="chatter">
+        <h1>Students qualifying for free and reduced-cost lunch by school district</h1>
+        <p>The WIAA is exploring a socioeconomic solution to the widening competition gap. For every percentage point above the state average (43%) of students qualifying for free or reduced-cost lunch, the school's enrollment figure, that's used to determine its WIAA classification, would be equally reduced. Explore the map below to see the free and reduced-cost lunch rates and athletic success by district and WIAA high school.</p>
+      </section>
+
+      <div class="aspect-ratio-outer">
+        <div class="aspect-ratio-inner">
+
+          <leaflet-map class="lunch" zoom=8>
+            <tile-layer layer="cartoPositron"></tile-layer>
+          </leaflet-map>
+        </div>
+
+        <aside class="legend">
+          <h1>Qualifying free and reduced lunches</h1>
+          <ul class="scale">
+            <li>
+              <span class="block" style="background-color: #990000"></span> 81 - 100% of students</li>
+            <li>
+              <span class="block" style="background-color: #d7301f"></span> 61 - 80%</li>
+            <li>
+              <span class="block" style="background-color: #ef6548"></span> 41 - 60%</li>
+            <li>
+              <span class="block" style="background-color: #fdbb84"></span> 21 - 40%</li>
+            <li>
+              <span class="block" style="background-color: #fef0d9"></span> 0 - 20%</li>
+          </ul>
+        </aside>
+      </div>
+
+
+      <div class="source">Note: State championships counted over the past 10 years<br>Sources: Office of Superintendent of Public Instruction, Washington Interscholastic Activities Association
+        <span class="credit">Emily M. Eng / THE SEATTLE TIMES</div>
+    </div>
+  </responsive-child>
+
+  <script src="app.js"></script>
+  <% /*= t.include("partials/_foot.html"); */ %>
+    <%= t.include("partials/_workHere.html") %>
+</body>
+
+</html>
