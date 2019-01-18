@@ -84,6 +84,8 @@ if (mapElement) {
 
 }
 
+ map.scrollWheelZoom.disable();
+
 	var data2 = require("./championship_school.geo.json");
   var mapElement = document.querySelector("leaflet-map.champs");
 

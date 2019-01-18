@@ -17,23 +17,22 @@ body {
   padding-bottom: 0;
   clear: both;
 }
-
-.display-flex()
-  // display: flex;)
   
-  [data-flex="1-2"] {
-      .flex(0 0 50%)}
-
 
 .aspect-ratio-outer {
   width: 100%;
   position: relative;
+  margin: 0 -5px;
+    .display-flex();
 
-
+    @media @mobile {
+        display: block;
+    }
 
   .aspect-ratio-inner {
     padding-bottom: percentage(@aspect-ratio);
     position: relative;
+    margin: 0 5px;
   }
   leaflet-map {
     position: absolute;
@@ -41,6 +40,7 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
+
     &:not([ready]) {
       display: none;
     }
@@ -48,6 +48,7 @@ body {
 }
 .map-container {
   position: relative;
+
 }
 .bigheader {
   text-align: center;
